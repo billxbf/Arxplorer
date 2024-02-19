@@ -1,0 +1,4 @@
+**/app.log
+**/authors_cache.db
+**/__pycache__
+**/*.pyc
