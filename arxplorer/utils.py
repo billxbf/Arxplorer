@@ -95,19 +95,26 @@ def wrap_text(text, width):
     return wrapped_lines
 
 def print_paper_metadata(papers):
+    # ANSI color codes
+    color_title = "\033[94m"  # Blue
+    color_url = "\033[92m"    # Green
+    color_summary = "\033[93m" # Yellow
+    reset_color = "\033[0m"   # Reset to default terminal color
+    
     max_width = 75  # Adjusted for consistent right border
+    border_line = "+" + "-" * 78 + "+"
     for paper in papers:
-        print("+------------------------------------------------------------------------------+")
+        print(border_line)
         title_lines = wrap_text(paper.title, max_width)
         for line in title_lines:
-            print(f"| {line.ljust(max_width)}  |")
-        url_line = f"| URL: {paper.pdf_url}"
-        print(f"{url_line.ljust(max_width + 2)}  |")
-        print("+------------------------------------------------------------------------------+")
+            print(f"| {color_title}{line.ljust(max_width)}{reset_color}  |")
+        url_line = f"| {color_url}URL: {paper.pdf_url}{reset_color}"
+        print(f"{url_line.ljust(max_width + 9)}    |")  # Adjust padding for color codes
+        print(border_line)
         if paper.summary:
-            print("| TL;DR: ".ljust(max_width + 3) + " |")
+            print(f"| {color_summary}Summary: {reset_color}".ljust(max_width + 9) + "    |")  # Adjust padding for color codes
             summary_lines = wrap_text(paper.summary, max_width)
             for line in summary_lines:
                 print(f"| {line.ljust(max_width)}  |")
-            print("+------------------------------------------------------------------------------+")
+        print(border_line)
         print()  # Print an empty line for spacing between papers

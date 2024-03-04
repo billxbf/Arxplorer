@@ -4,7 +4,7 @@ from typing import List
 
 import requests
 from bs4 import BeautifulSoup
-from scholarly import ProxyGenerator, scholarly
+from scholarly import scholarly
 from tqdm import tqdm
 
 from arxplorer.datamodel import Author, Feed
@@ -25,7 +25,7 @@ def parse_arxiv(namespace: str, fast_mode: bool = False, n_tests: int = 999) -> 
 
     feeds = []
     n_blocks = min(len(papers), n_tests)
-    for i in tqdm(range(n_blocks), desc="Collecting data from papers ..."):
+    for i in tqdm(range(n_blocks), desc="Collecting author data ..."):
         block = papers[i]
 
         try:

@@ -25,7 +25,7 @@ class Feed:
 @dataclass
 class Config:
     namespace: str = "cs.AI"
-    instruction: str = "I like innovative papers in large foundation models, multimodal methods, symbolic planning and automation,  Others general ML topics are welcome, while direct applications in niche fields are less interesting."
+    instruction: str = "I like papers with innovative ideas and promising applications."
     top_k: int = 10  
     coarse_k: int = 20  # Number of papers to keep after coarse ranking
     use_openai: bool = True  # Whether to use OpenAI to rerank and summarize
