@@ -38,7 +38,7 @@ Use `namespace` to specify the section in arXiv to scrape from (make sure https:
 ```
 python run.py --namespace="cs.AI" --top_k=10 --coarse_k=20
 ```
-`fast_mode` is set to True by default, which ignores author-related features. Collecting author data stably (using [scholarly](https://github.com/scholarly-python-package/scholarly) and [free-proxy](https://github.com/jundymek/free-proxy) can be painfully slow to start with (while going better as `authors_cache.db` automatically builds up the cache). If you are deploying on server or have ~1hr to let it run, 
+`fast_mode` is set to True by default, which ignores author-related features. Collecting author data stably (using [scholarly](https://github.com/scholarly-python-package/scholarly) and [free-proxy](https://github.com/jundymek/free-proxy) can be painfully slow at the beginning (and going faster as `authors_cache.db` builds up the cache). If you are deploying on server or have ~1hr to let it run, 
 ```
 python run.py --fast_mode=False
 ```

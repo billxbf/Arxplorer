@@ -21,7 +21,6 @@ args = parser.parse_args()
 if 'INSTRUCTION' in os.environ:
     args.instruction = os.environ['INSTRUCTION']
 
-print(args.instruction)
 
 # Use arguments to parse feeds and configure ranking
 feeds = parse_arxiv(args.namespace, fast_mode=args.fast_mode)
@@ -35,5 +34,5 @@ cfg = Config(top_k=args.top_k,
 ranker = PaperRanker(cfg)
 ranked_feeds = ranker.rank(feeds)
 
-print(f"Top papers today based on your preferences:")
+print(f"Top {args.namespace} papers today based on your preferences:")
 print_paper_metadata(ranked_feeds)
