@@ -5,6 +5,9 @@ from arxplorer.ranker import PaperRanker
 from arxplorer.datamodel import Config
 from arxplorer.utils import print_paper_metadata
 import os
+import warnings
+warnings.filterwarnings("ignore")
+os.environ['CURL_CA_BUNDLE'] = ''  # hotfix on cer issues related to huggingface
 
 # Set up argument parser
 parser = argparse.ArgumentParser(description='Rank daily paper feeds from arXiv.')
