@@ -1,5 +1,5 @@
 # ArXplorer
-Tiny recommender of daily papers from arXiv, customized with your Prompt.
+Recommender of daily papers from arXiv, customized with your Prompt. Minimal, hackable, no-boilerplate.
 
 <div align="center">
   <img src="https://github.com/billxbf/arxplorer/assets/65674752/5b4f6728-da3e-4891-9d88-ef33f1176fea" width=400 height=400>
