@@ -1,5 +1,6 @@
-import sqlite3
 import logging
+import sqlite3
+
 from arxplorer.logging import setup_logging
 
 setup_logging()
