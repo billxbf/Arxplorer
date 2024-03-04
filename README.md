@@ -44,7 +44,7 @@ python run.py --fast_mode=False
 ```
 
 ## Disclaimer 
-This ranker is soooo biased and I'm pretty sure some cool papers are missed. But I feel it helpful in capturing part of the works I regret to miss.
+This ranker is soooo biased and I'm pretty sure some cool papers are overlooked. But I feel it helpful in capturing part of which I regret to miss.
 
 ## Next Step 
 I'll create a Tweeter Bot soon to serve this project into daily feed. Feel free to contact me @billxbf for suggestions or contribute to more features, faster pipelines etc :) 
