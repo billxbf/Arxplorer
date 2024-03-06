@@ -116,5 +116,5 @@ def print_paper_metadata(papers):
             summary_lines = wrap_text(paper.summary, max_width)
             for line in summary_lines:
                 print(f"| {line.ljust(max_width)}  |")
-        print(border_line)
+            print(border_line)
         print()  # Print an empty line for spacing between papers
