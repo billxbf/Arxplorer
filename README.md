@@ -1,4 +1,4 @@
-# ArXplorer
+# ArXplorer 📖
 Recommender of daily papers from arXiv, customized with your Prompt. Minimal, hackable, no-boilerplate.
 
 <div align="center">
